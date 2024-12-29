@@ -15,17 +15,9 @@ function App() {
   });
 
   function updateFeedback(feedbackType) {
-    localStorage.setItem(feedbackType, typeFeedback[feedbackType] +1);
-    let item = +localStorage.getItem(feedbackType)
-    console.log(typeof(item), item);
-    setTypeFeedback(prevState =>  
-      {prevState[feedbackType] = item;
-      console.log(prevState);}
- 
-    )
-
+    setTypeFeedback((prevState) => (prevState[feedbackType] += 1));
   }
-  
+
   return (
     <>
       <Description />
