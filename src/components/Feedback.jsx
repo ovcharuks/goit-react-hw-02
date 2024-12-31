@@ -1,10 +1,17 @@
-export default function Feedback (feedbacks ){
+import style from './Feedback.module.css';
+
+export default function Feedback 
+({typeFeedback, 
+    totalFeedback, 
+    positiveFeedback}){
     
     return (
-<ul>
-    <li>Good: {feedbacks.good}</li>
-    <li>Neutral: {feedbacks.neutral}</li>
-    <li>Bad: {feedbacks.bad}</li>
+<ul className={style.list}>
+    <li>Good: {typeFeedback.good}</li>
+    <li>Neutral: {typeFeedback.neutral}</li>
+    <li>Bad: {typeFeedback.bad}</li>
+    <li>Total: {totalFeedback}</li>
+    <li>Positive: {positiveFeedback}%</li>
 </ul>
     )
 }
