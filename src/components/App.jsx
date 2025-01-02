@@ -33,7 +33,7 @@ useEffect(()=> {
   function updateFeedback(feedbackType) {
     setTypeFeedback((prevState) => ({
       ...prevState,
-      [feedbackType]: prevState[feedbackType]++,
+      [feedbackType]: ++prevState[feedbackType],
     }));
   }
 
